@@ -4,8 +4,18 @@ import { ChevronRight, Link } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 import { url } from 'inspector';
 
+// Define interface for project content
+interface ProjectContentType {
+  title: string;
+  description: string;
+  techStack: string[];
+  date: string;
+  links: { name: string; url: string }[];
+  images: { src: string; alt: string }[];
+}
+
 // Enhanced project content array with all projects
-const PROJECT_CONTENT = [
+const PROJECT_CONTENT: ProjectContentType[] = [
   {
     title: 'Graphay',
     description:
